@@ -1,0 +1,17 @@
+{
+  "name": "helloChrome",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "第一个由我开发的扩展",
+  "browser_action": {
+    "default_title": "hello world",
+    "default_icon": "heart-icons.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.baidu.com/*","*://localhost/"],
+      "js": ["js/jquery.js","js/cannot_touch.js","js/popup.js"]
+    }
+  ]
+}
